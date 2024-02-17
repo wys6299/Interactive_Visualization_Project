@@ -1,5 +1,6 @@
 <script>
   import * as d3 from 'd3';
+  import {Scrubber} from "@mbostock/scrubber"
 
   export let data;
 
@@ -17,23 +18,19 @@
   let gy;
 
   $: x = d3
-    .scaleUtc()
-    .domain(d3.extent(data, (d) => d.date))
-    .range([marginLeft, width - marginRight]);
+    .scaleLog([200, 1e5], [margin.left, width - margin.right]);
 
   $: y = d3
-    .scaleLinear()
-    .domain(d3.extent(data, (d) => d.value))
-    .nice()
-    .range([height - marginBottom, marginTop]);
+    .scaleLinear([14, 86], [height - margin.bottom, margin.top]);
+  
+  $: radius = d3.scaleSqrt([0, 5e8], [0, width / 24]);
 
   $: max = d3.max(data, (d) => Math.abs(d.value));
 
   // Create a symmetric diverging color scale.
   $: color = d3
-    .scaleSequential()
-    .domain([max, -max])
-    .interpolator(d3.interpolateRdBu);
+    .scaleOrdinal(data.map(d => d.region), d3.schemeCategory10)
+    .unknown("black");
 
   $: d3.select(gx).call(d3.axisBottom(x).ticks(width / 80));
   $: d3.select(gy)
@@ -63,7 +60,7 @@
     .on('pointerleave', onPointerLeave);
 </script>
 
-<div class="temperature-plot">
+<div class="gdp_co2_death-plot">
   <svg
     bind:this={svg}
     {width}

@@ -1,18 +1,14 @@
 <script>
   import { onMount } from 'svelte';
   import * as d3 from 'd3';
-  import Temperature from './Temperature.svelte';
-  import Temperature01Marks from './Temperature01Marks.svelte';
-  import Temperature02Channels from './Temperature02Channels.svelte';
-  import Temperature03Axes from './Temperature03Axes.svelte';
-  import Temperature04Interactive from './Temperature04Interactive.svelte';
+  import gdp_co2_death from './gdp_co2_death.svelte';
 
   let data = [];
   let tempData = [];
 
   onMount(async () => {
     const res = await fetch(
-      'co2_death.csv',
+      'gdp_co2_death.csv',
     );
     const csv = await res.text();
     tempData = d3.csvParse(csv, d3.autoType)
@@ -22,8 +18,8 @@
 </script>
 
 <main>
-  <h1>Global Temperature Trends</h1>
-  <Temperature {data} />
+  <h1>Global gdp_co2_death Trends</h1>
+  <gdp_co2_death {data} />
 </main>
 
 <style>
