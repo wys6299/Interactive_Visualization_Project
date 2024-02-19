@@ -1,25 +1,21 @@
 <script>
   import { onMount } from 'svelte';
   import * as d3 from 'd3';
-  import gdp_co2_death from './gdp_co2_death.svelte';
+  import Graph from './graph.svelte';
 
   let data = [];
   let tempData = [];
 
   onMount(async () => {
-    const res = await fetch(
-      'gdp_co2_death.csv',
-    );
-    const csv = await res.text();
-    tempData = d3.csvParse(csv, d3.autoType)
-    console.log(tempData)
+    const res = await fetch('nations.json');
+    tempData = await res.json();
+    data = res; // Assigning data inside the onMount function
   });
-  data = tempData;
 </script>
 
 <main>
   <h1>Global gdp_co2_death Trends</h1>
-  <gdp_co2_death {data} />
+  <Graph {data} />
 </main>
 
 <style>
