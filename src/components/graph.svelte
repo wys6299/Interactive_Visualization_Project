@@ -161,27 +161,7 @@
 </script>
 
 <div id="chart">
-    <!-- <svg
-    bind:this={svg}
->
-        <g class="tooltip" style="display: none;">
-            <rect x="-30" y="-30" width="60" height="30" fill="white" stroke="black" stroke-width="1"></rect>
-            <text x="0" y="-15" text-anchor="middle" font-size="12px" font-weight="bold"></text>
-        </g>
-
-        {#each dataAt(selectedYear) as d}
-            <circle
-                cx={x(d.GDP)}
-                cy={y(d.Death)}
-                r={radius(d.Population)}
-                fill={color(d.Continent)}
-                fill-opacity="0.7" 
-                stroke="black"
-                stroke-width="1"
-            >
-            </circle>
-        {/each}
-    </svg> -->
+    
 </div>
 <Slider bind:selectedYear /> 
 
