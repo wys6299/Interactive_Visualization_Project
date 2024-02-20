@@ -431,9 +431,6 @@ BIH,2016,12837.599,Upper middle income,Bosnia and Herzegovina,,3480985.0,Europe,
 BIH,2017,13402.434,Upper middle income,Bosnia and Herzegovina,,3440025.0,Europe,21.902143,100.0
 BIH,2018,14066.845,Upper middle income,Bosnia and Herzegovina,,3400132.0,Europe,21.133392,100.0
 BIH,2019,14634.738,Upper middle income,Bosnia and Herzegovina,,3360718.0,Europe,20.105274,100.0
-BIH,1991,,Upper middle income,Bosnia and Herzegovina,,4502389.0,Europe,96.92662,100.0
-BIH,1992,,Upper middle income,Bosnia and Herzegovina,,4275737.0,Europe,96.874115,100.0
-BIH,1993,,Upper middle income,Bosnia and Herzegovina,,3942985.0,Europe,96.47749,100.0
 BWA,2009,11729.565,Upper middle income,Botswana,1.8802434,2048997.0,Africa,80.66441,43.36
 BWA,1991,9569.46,Upper middle income,Botswana,1.9081771,1380593.0,Africa,160.88373,10.1
 BWA,1992,9570.549,Upper middle income,Botswana,1.9548954,1420696.0,Africa,158.09286,9.398227
@@ -631,12 +628,6 @@ CAN,2015,47522.14,High income,Canada,15.1512575,35732120.0,North America,0.01355
 CAN,2016,47457.586,High income,Canada,14.440152,36113532.0,North America,0.012966584,100.0
 CAN,2018,48962.48,High income,Canada,14.267604,37035260.0,North America,0.012150394,100.0
 CAN,2019,49171.51,High income,Canada,13.97757,37522584.0,North America,0.011579083,100.0
-CAN,1991,,High income,Canada,17.220844,28015762.0,North America,0.27856743,100.0
-CAN,1992,,High income,Canada,17.481512,28347644.0,North America,0.2733881,100.0
-CAN,1993,,High income,Canada,16.836891,28668168.0,North America,0.27202398,100.0
-CAN,1994,,High income,Canada,16.835485,28981190.0,North America,0.26731578,100.0
-CAN,1995,,High income,Canada,16.9354,29289430.0,North America,0.26249665,100.0
-CAN,1996,,High income,Canada,17.084951,29593856.0,North America,0.2520255,100.0
 CPV,2015,5955.607,Lower middle income,Cape Verde,,552169.0,Africa,26.4555,86.35784
 CPV,1991,1607.7675,Lower middle income,Cape Verde,,372733.0,Africa,104.835144,
 CPV,1992,1740.5358,Lower middle income,Cape Verde,,381957.0,Africa,101.85963,
@@ -952,10 +943,6 @@ HRV,2015,24931.486,High income,Croatia,5.0496497,4254821.0,Europe,2.4674745,100.
 HRV,2016,25999.834,High income,Croatia,5.3477626,4223748.0,Europe,2.1817148,100.0
 HRV,2018,28225.002,High income,Croatia,5.827582,4160488.0,Europe,1.9475467,100.0
 HRV,2019,29352.79,High income,Croatia,5.6870837,4129749.0,Europe,1.8349184,100.0
-HRV,1991,,High income,Croatia,3.2302752,4844526.0,Europe,14.633271,100.0
-HRV,1992,,High income,Croatia,3.7915807,4798318.0,Europe,13.677366,100.0
-HRV,1993,,High income,Croatia,3.798436,4792409.0,Europe,12.837619,100.0
-HRV,1994,,High income,Croatia,3.701488,4819431.0,Europe,11.96512,100.0
 CYP,2017,38421.97,High income,Cyprus,6.479456,1208527.0,Europe,0.05298834,100.0
 CYP,1991,24774.078,High income,Cyprus,8.630006,799067.0,Europe,1.3366872,100.0
 CYP,1992,26391.29,High income,Cyprus,10.270729,810435.0,Europe,1.2023776,100.0
@@ -1079,28 +1066,6 @@ DJI,2015,4073.6226,Lower middle income,Djibouti,,1006266.0,Africa,41.001778,57.5
 DJI,2016,4291.2974,Lower middle income,Djibouti,,1023269.0,Africa,38.883717,58.675446
 DJI,2018,4589.3784,Lower middle income,Djibouti,,1057204.0,Africa,34.975494,60.564186
 DJI,2019,4768.113,Lower middle income,Djibouti,,1073999.0,Africa,32.754246,61.21193
-DJI,1991,,Lower middle income,Djibouti,,628528.0,Africa,143.01248,
-DJI,1992,,Lower middle income,Djibouti,,623208.0,Africa,140.5223,
-DJI,1993,,Lower middle income,Djibouti,,611239.0,Africa,137.13115,
-DJI,1994,,Lower middle income,Djibouti,,623482.0,Africa,131.96428,
-DJI,1995,,Lower middle income,Djibouti,,629628.0,Africa,129.46964,
-DJI,1996,,Lower middle income,Djibouti,,644659.0,Africa,124.11388,62.0
-DJI,1997,,Lower middle income,Djibouti,,667793.0,Africa,117.78623,56.294495
-DJI,1998,,Lower middle income,Djibouti,,694931.0,Africa,112.79028,56.322254
-DJI,1999,,Lower middle income,Djibouti,,719381.0,Africa,106.32097,56.34517
-DJI,2000,,Lower middle income,Djibouti,,742046.0,Africa,99.19857,56.37995
-DJI,2001,,Lower middle income,Djibouti,,765496.0,Africa,90.683914,56.365143
-DJI,2002,,Lower middle income,Djibouti,,789140.0,Africa,81.17852,49.7
-DJI,2003,,Lower middle income,Djibouti,,806412.0,Africa,71.42301,56.315117
-DJI,2004,,Lower middle income,Djibouti,,818380.0,Africa,64.97394,56.2846
-DJI,2005,,Lower middle income,Djibouti,,830863.0,Africa,59.926903,56.253548
-DJI,2006,,Lower middle income,Djibouti,,846957.0,Africa,57.07038,55.5
-DJI,2007,,Lower middle income,Djibouti,,865202.0,Africa,54.956516,56.199707
-DJI,2008,,Lower middle income,Djibouti,,882893.0,Africa,53.068558,56.182278
-DJI,2009,,Lower middle income,Djibouti,,901106.0,Africa,51.090355,56.17479
-DJI,2010,,Lower middle income,Djibouti,,919206.0,Africa,49.683685,56.17995
-DJI,2011,,Lower middle income,Djibouti,,936819.0,Africa,47.93434,56.20047
-DJI,2012,,Lower middle income,Djibouti,,954311.0,Africa,46.324833,54.6
 DOM,2017,16524.533,Upper middle income,Dominican Republic,2.8724978,10647247.0,North America,12.412523,100.0
 DOM,1991,6137.1045,Upper middle income,Dominican Republic,1.366433,7278410.0,North America,56.730587,78.2
 DOM,1992,6688.8706,Upper middle income,Dominican Republic,1.4647353,7427347.0,North America,51.632763,82.485405
@@ -1150,15 +1115,6 @@ TLS,2016,3286.7947,Lower middle income,East Timor,,1224568.0,Asia,137.7337,76.5
 TLS,2017,3138.4387,Lower middle income,East Timor,,1243238.0,Asia,136.72423,79.77896
 TLS,2018,3070.8086,Lower middle income,East Timor,,1261850.0,Asia,135.72289,85.3814
 TLS,2019,3737.7964,Lower middle income,East Timor,,1280442.0,Asia,134.43195,90.79865
-TLS,1991,,Lower middle income,East Timor,,772663.0,Asia,222.332,
-TLS,1992,,Lower middle income,East Timor,,783708.0,Asia,221.27647,
-TLS,1993,,Lower middle income,East Timor,,795184.0,Asia,219.85501,
-TLS,1994,,Lower middle income,East Timor,,807119.0,Asia,216.54951,
-TLS,1995,,Lower middle income,East Timor,,819234.0,Asia,212.89832,
-TLS,1996,,Lower middle income,East Timor,,831272.0,Asia,208.3588,
-TLS,1997,,Lower middle income,East Timor,,843347.0,Asia,203.33365,
-TLS,1998,,Lower middle income,East Timor,,855421.0,Asia,203.32982,
-TLS,1999,,Lower middle income,East Timor,,866652.0,Asia,202.92215,
 ECU,2017,11679.431,Upper middle income,Ecuador,2.6884546,16696947.0,South America,4.0812197,99.2
 ECU,1991,8281.087,Upper middle income,Ecuador,1.4682052,10686277.0,South America,31.789133,
 ECU,1992,8279.568,Upper middle income,Ecuador,1.8197306,10914222.0,South America,28.308496,
@@ -1271,10 +1227,6 @@ EST,2015,31038.805,High income,Estonia,13.685046,1314658.0,Europe,1.7556496,100.
 EST,2016,32008.934,High income,Estonia,12.607426,1315928.0,Europe,1.6174792,100.0
 EST,2018,34979.867,High income,Estonia,13.623396,1322146.0,Europe,1.4405401,100.0
 EST,2019,36153.434,High income,Estonia,11.035066,1327039.0,Europe,1.4005258,100.0
-EST,1991,,High income,Estonia,19.334183,1565621.0,Europe,22.067383,100.0
-EST,1992,,High income,Estonia,15.591779,1540386.0,Europe,20.036917,100.0
-EST,1993,,High income,Estonia,11.924236,1504446.0,Europe,19.734823,100.0
-EST,1994,,High income,Estonia,11.270091,1475730.0,Europe,19.41752,100.0
 SWZ,2016,8113.2397,Lower middle income,Eswatini,,1142529.0,Africa,98.555435,63.43
 SWZ,1991,4795.2285,Lower middle income,Eswatini,,889719.0,Africa,174.37358,
 SWZ,1992,4760.2476,Lower middle income,Eswatini,,925170.0,Africa,167.19598,
@@ -1793,10 +1745,6 @@ ISL,2015,52142.934,High income,Iceland,,331068.0,Europe,0.015130186,100.0
 ISL,2016,54665.766,High income,Iceland,,335677.0,Europe,0.014005014,100.0
 ISL,2018,56816.363,High income,Iceland,,352951.0,Europe,0.01241435,100.0
 ISL,2019,56923.17,High income,Iceland,,360787.0,Europe,0.011717204,100.0
-ISL,1991,,High income,Iceland,,257995.0,Europe,0.19058053,100.0
-ISL,1992,,High income,Iceland,,261275.0,Europe,0.17185093,100.0
-ISL,1993,,High income,Iceland,,263942.0,Europe,0.15425481,100.0
-ISL,1994,,High income,Iceland,,266230.0,Europe,0.14033498,100.0
 IND,2011,4374.2324,Lower middle income,India,1.2969729,1257621248.0,Asia,97.37419,67.6
 IND,1991,1800.0109,Lower middle income,India,0.67134404,888941760.0,Asia,213.57013,
 IND,1992,1859.7148,Lower middle income,India,0.71240574,907574080.0,Asia,209.5421,
@@ -1938,10 +1886,6 @@ ISR,2015,37321.016,High income,Israel,10.02826,8007777.0,Asia,0.037279874,100.0
 ISR,2017,39121.297,High income,Israel,9.320733,8309256.0,Asia,0.033554293,100.0
 ISR,2018,39936.77,High income,Israel,9.641503,8456487.0,Asia,0.032500636,100.0
 ISR,2019,40810.055,High income,Israel,9.209422,8607922.0,Asia,0.031039696,100.0
-ISR,1991,,High income,Israel,10.110506,4942821.0,Asia,0.30569777,100.0
-ISR,1992,,High income,Israel,11.401026,5079388.0,Asia,0.2878709,100.0
-ISR,1993,,High income,Israel,11.14558,5213005.0,Asia,0.2576042,100.0
-ISR,1994,,High income,Israel,11.414315,5346294.0,Asia,0.23416321,100.0
 ITA,2017,41581.12,High income,Italy,7.438333,60004024.0,Europe,0.07974391,100.0
 ITA,1991,37122.82,High income,Italy,9.882918,56794488.0,Europe,0.85450345,100.0
 ITA,1992,37407.11,High income,Italy,10.764093,56833184.0,Europe,0.75664353,100.0
@@ -2128,23 +2072,6 @@ OWID_KOS,2015,9445.105,Lower middle income,Kosovo,,1759122.0,Europe,,99.86
 OWID_KOS,2016,10031.044,Lower middle income,Kosovo,,1750724.0,Europe,,99.8
 OWID_KOS,2018,10755.168,Lower middle income,Kosovo,,1709966.0,Europe,,
 OWID_KOS,2019,11318.462,Lower middle income,Kosovo,,1686856.0,Europe,,100.0
-OWID_KOS,1991,,Lower middle income,Kosovo,,2001990.0,Europe,,100.0
-OWID_KOS,1992,,Lower middle income,Kosovo,,2039038.0,Europe,,100.0
-OWID_KOS,1993,,Lower middle income,Kosovo,,2073994.0,Europe,,100.0
-OWID_KOS,1994,,Lower middle income,Kosovo,,2107943.0,Europe,,100.0
-OWID_KOS,1995,,Lower middle income,Kosovo,,2141414.0,Europe,,100.0
-OWID_KOS,1996,,Lower middle income,Kosovo,,2173719.0,Europe,,100.0
-OWID_KOS,1997,,Lower middle income,Kosovo,,2204871.0,Europe,,100.0
-OWID_KOS,1998,,Lower middle income,Kosovo,,2090498.0,Europe,,100.0
-OWID_KOS,1999,,Lower middle income,Kosovo,,1888582.0,Europe,,100.0
-OWID_KOS,2000,,Lower middle income,Kosovo,,1823291.0,Europe,,
-OWID_KOS,2001,,Lower middle income,Kosovo,,1840261.0,Europe,,
-OWID_KOS,2002,,Lower middle income,Kosovo,,1846788.0,Europe,,
-OWID_KOS,2003,,Lower middle income,Kosovo,,1839437.0,Europe,,
-OWID_KOS,2004,,Lower middle income,Kosovo,,1832246.0,Europe,,
-OWID_KOS,2005,,Lower middle income,Kosovo,,1825054.0,Europe,,
-OWID_KOS,2006,,Lower middle income,Kosovo,,1817660.0,Europe,,
-OWID_KOS,2007,,Lower middle income,Kosovo,,1810225.0,Europe,,
 KGZ,2017,5046.6914,Lower middle income,Kyrgyzstan,2.715368,6121266.0,Asia,40.338825,100.0
 KGZ,1991,4671.523,Lower middle income,Kyrgyzstan,3.9209075,4456096.0,Asia,112.69105,
 KGZ,1992,3978.91,Lower middle income,Kyrgyzstan,3.9838605,4501258.0,Asia,112.07335,
@@ -2228,10 +2155,6 @@ LVA,2015,26628.355,High income,Latvia,6.009028,1991951.0,Europe,3.0780292,100.0
 LVA,2016,27509.336,High income,Latvia,6.094327,1973477.0,Europe,2.8313365,100.0
 LVA,2018,30051.402,High income,Latvia,8.306617,1935632.0,Europe,2.5302234,100.0
 LVA,2019,31038.68,High income,Latvia,8.013891,1916552.0,Europe,2.4187076,100.0
-LVA,1991,,High income,Latvia,7.4115386,2678970.0,Europe,14.489217,100.0
-LVA,1992,,High income,Latvia,6.9085937,2662885.0,Europe,13.677199,100.0
-LVA,1993,,High income,Latvia,5.5452986,2638889.0,Europe,14.072748,100.0
-LVA,1994,,High income,Latvia,5.2751317,2606464.0,Europe,14.203839,100.0
 LBN,2011,19216.969,Upper middle income,Lebanon,,5045061.0,Asia,0.66937053,99.68401
 LBN,1991,8587.337,Upper middle income,Lebanon,,3666735.0,Asia,16.449875,
 LBN,1992,9788.923,Upper middle income,Lebanon,,3745410.0,Asia,14.248923,
@@ -2310,15 +2233,6 @@ LBR,2015,1581.055,Low income,Liberia,,4612330.0,Africa,135.63629,15.161736
 LBR,2017,1533.4113,Low income,Liberia,,4796632.0,Africa,128.02429,24.2
 LBR,2018,1521.7335,Low income,Liberia,,4889396.0,Africa,125.54276,22.879133
 LBR,2019,1455.6377,Low income,Liberia,,4985290.0,Africa,122.113075,23.1
-LBR,1991,,Low income,Liberia,,1939244.0,Africa,231.55836,
-LBR,1992,,Low income,Liberia,,2052633.0,Africa,233.76451,
-LBR,1993,,Low income,Liberia,,2132776.0,Africa,235.39679,
-LBR,1994,,Low income,Liberia,,2125202.0,Africa,233.26355,
-LBR,1995,,Low income,Liberia,,2142429.0,Africa,227.14462,
-LBR,1996,,Low income,Liberia,,2203974.0,Africa,226.64705,
-LBR,1997,,Low income,Liberia,,2383302.0,Africa,220.75967,
-LBR,1998,,Low income,Liberia,,2639227.0,Africa,215.42628,
-LBR,1999,,Low income,Liberia,,2789749.0,Africa,207.17525,
 LTU,2017,33761.87,High income,Lithuania,7.6610823,2904452.0,Europe,1.1259656,100.0
 LTU,1995,10640.36,High income,Lithuania,7.4700694,3747269.0,Europe,8.424723,100.0
 LTU,1996,11274.64,High income,Lithuania,6.1086426,3722023.0,Europe,7.4152384,100.0
@@ -2344,10 +2258,6 @@ LTU,2015,30748.197,High income,Lithuania,6.888429,2963764.0,Europe,1.4367056,100
 LTU,2016,31925.803,High income,Lithuania,7.290369,2933676.0,Europe,1.3010008,100.0
 LTU,2018,35446.707,High income,Lithuania,7.9841437,2876128.0,Europe,1.0505304,100.0
 LTU,2019,37184.453,High income,Lithuania,7.6449733,2849083.0,Europe,0.9842693,100.0
-LTU,1991,,High income,Lithuania,12.090465,3793430.0,Europe,10.333831,100.0
-LTU,1992,,High income,Lithuania,13.82881,3795748.0,Europe,9.46961,100.0
-LTU,1993,,High income,Lithuania,8.555422,3788532.0,Europe,9.663288,100.0
-LTU,1994,,High income,Lithuania,7.6100826,3770461.0,Europe,9.239559,100.0
 LUX,2017,114985.84,High income,Luxembourg,16.29948,596290.0,Europe,0.020992447,100.0
 LUX,1991,75961.67,High income,Luxembourg,32.181065,386405.0,Europe,0.21739934,100.0
 LUX,1992,76323.305,High income,Luxembourg,31.166609,391524.0,Europe,0.20298035,100.0
@@ -2489,10 +2399,6 @@ MDV,2015,18051.07,Upper middle income,Maldives,,435590.0,Asia,11.485048,99.70647
 MDV,2017,18973.568,Upper middle income,Maldives,,472449.0,Asia,10.052274,99.8
 MDV,2018,19789.49,Upper middle income,Maldives,,489773.0,Asia,9.264018,100.0
 MDV,2019,20574.404,Upper middle income,Maldives,,504518.0,Asia,8.409028,100.0
-MDV,1991,,Upper middle income,Maldives,,232159.0,Asia,164.60266,
-MDV,1992,,Upper middle income,Maldives,,239146.0,Asia,158.96257,
-MDV,1993,,Upper middle income,Maldives,,245852.0,Asia,148.53217,
-MDV,1994,,Upper middle income,Maldives,,252211.0,Asia,135.06131,
 MLI,2009,1980.0592,Low income,Mali,,15032645.0,Africa,181.3659,24.030895
 MLI,1991,1464.2628,Low income,Mali,,9123965.0,Africa,234.15697,
 MLI,1992,1388.7308,Low income,Mali,,9310571.0,Africa,232.05338,
@@ -2692,10 +2598,6 @@ MDA,2015,10355.539,Lower middle income,Moldova,,3277390.0,Europe,7.1330204,100.0
 MDA,2016,10938.585,Lower middle income,Moldova,,3225125.0,Europe,6.444348,100.0
 MDA,2018,12367.764,Lower middle income,Moldova,,3141839.0,Europe,5.3520837,99.99
 MDA,2019,13030.183,Lower middle income,Moldova,,3109496.0,Europe,4.985874,100.0
-MDA,1991,,Lower middle income,Moldova,,4490929.0,Europe,89.06652,100.0
-MDA,1992,,Lower middle income,Moldova,,4494901.0,Europe,84.74706,100.0
-MDA,1993,,Lower middle income,Moldova,,4493699.0,Europe,87.082634,100.0
-MDA,1994,,Lower middle income,Moldova,,4482513.0,Europe,94.837776,100.0
 MNG,2018,12052.294,Lower middle income,Mongolia,12.955452,3163994.0,Asia,51.64715,98.1
 MNG,1991,4512.1104,Lower middle income,Mongolia,3.9770222,2200077.0,Asia,193.89119,
 MNG,1992,4027.778,Lower middle income,Mongolia,4.1050043,2236503.0,Asia,194.20616,
@@ -2748,12 +2650,6 @@ MNE,2015,18266.879,Upper middle income,Montenegro,,633969.0,Europe,21.575037,100
 MNE,2017,19685.809,Upper middle income,Montenegro,,632445.0,Europe,20.178663,100.0
 MNE,2018,20690.285,Upper middle income,Montenegro,,631459.0,Europe,19.03783,100.0
 MNE,2019,21537.809,Upper middle income,Montenegro,,630403.0,Europe,17.734922,100.0
-MNE,1991,,Upper middle income,Montenegro,,624961.0,Europe,32.41269,100.0
-MNE,1992,,Upper middle income,Montenegro,,627669.0,Europe,32.506065,100.0
-MNE,1993,,Upper middle income,Montenegro,,629560.0,Europe,33.777752,100.0
-MNE,1994,,Upper middle income,Montenegro,,630973.0,Europe,35.069614,100.0
-MNE,1995,,Upper middle income,Montenegro,,632066.0,Europe,35.315826,100.0
-MNE,1996,,Upper middle income,Montenegro,,633014.0,Europe,35.50664,100.0
 MAR,2013,6352.433,Lower middle income,Morocco,1.880475,33803528.0,Africa,14.646729,97.2
 MAR,1991,3789.995,Lower middle income,Morocco,1.2346224,24988088.0,Africa,73.003654,
 MAR,1992,3649.8718,Lower middle income,Morocco,1.4125476,25400676.0,Africa,71.2648,49.2
@@ -3128,9 +3024,6 @@ PSE,2015,6048.9766,Lower middle income,Palestine,,4484615.0,Asia,2.3042316,99.9
 PSE,2017,6401.7407,Lower middle income,Palestine,,4700954.0,Asia,1.8554131,99.7
 PSE,2018,6318.21,Lower middle income,Palestine,,4805549.0,Asia,1.633869,100.0
 PSE,2019,6245.4487,Lower middle income,Palestine,,4909775.0,Asia,1.4275602,100.0
-PSE,1991,,Lower middle income,Palestine,,2214277.0,Asia,64.90129,
-PSE,1992,,Lower middle income,Palestine,,2310004.0,Asia,57.543118,
-PSE,1993,,Lower middle income,Palestine,,2410651.0,Asia,50.70518,
 PAN,2016,29410.635,Upper middle income,Panama,0.5498946,4026338.0,North America,4.977886,93.16477
 PAN,1991,11590.415,Upper middle income,Panama,1.2284222,2502048.0,North America,27.121319,73.44313
 PAN,1992,12284.064,Upper middle income,Panama,1.4073964,2554387.0,North America,26.637867,74.25564
@@ -3498,16 +3391,6 @@ STP,2015,3762.5698,Lower middle income,Sao Tome and Principe,,201142.0,Africa,11
 STP,2016,3852.0842,Lower middle income,Sao Tome and Principe,,204640.0,Africa,106.28056,69.32052
 STP,2018,3987.3835,Lower middle income,Sao Tome and Principe,,211358.0,Africa,97.24731,71.0
 STP,2019,4013.722,Lower middle income,Sao Tome and Principe,,214612.0,Africa,90.81727,74.9672
-STP,1991,,Lower middle income,Sao Tome and Principe,,123101.0,Africa,197.17848,
-STP,1992,,Lower middle income,Sao Tome and Principe,,125663.0,Africa,197.19875,
-STP,1993,,Lower middle income,Sao Tome and Principe,,128195.0,Africa,194.153,
-STP,1994,,Lower middle income,Sao Tome and Principe,,130679.0,Africa,193.43738,
-STP,1995,,Lower middle income,Sao Tome and Principe,,133094.0,Africa,193.63263,
-STP,1996,,Lower middle income,Sao Tome and Principe,,135423.0,Africa,194.95836,
-STP,1997,,Lower middle income,Sao Tome and Principe,,137672.0,Africa,194.75697,
-STP,1998,,Lower middle income,Sao Tome and Principe,,139801.0,Africa,193.85434,
-STP,1999,,Lower middle income,Sao Tome and Principe,,141823.0,Africa,190.31276,
-STP,2000,,Lower middle income,Sao Tome and Principe,,143729.0,Africa,182.42462,52.9
 SEN,2011,2790.8975,Lower middle income,Senegal,0.71356,12875878.0,Africa,125.53956,56.5
 SEN,1991,2463.9236,Lower middle income,Senegal,0.469679,7754296.0,Africa,182.11801,
 SEN,1992,2427.5107,Lower middle income,Senegal,0.4701991,7974512.0,Africa,176.8623,
@@ -3562,10 +3445,6 @@ SRB,2015,15581.014,Upper middle income,Serbia,,7519501.0,Europe,15.735806,99.9
 SRB,2016,16185.742,Upper middle income,Serbia,,7493288.0,Europe,14.585394,100.0
 SRB,2018,17455.945,Upper middle income,Serbia,,7433825.0,Europe,13.52081,100.0
 SRB,2019,18310.08,Upper middle income,Serbia,,7401056.0,Europe,12.903998,99.8
-SRB,1991,,Upper middle income,Serbia,,7964455.0,Europe,65.73437,100.0
-SRB,1992,,Upper middle income,Serbia,,7943504.0,Europe,64.60083,100.0
-SRB,1993,,Upper middle income,Serbia,,7957074.0,Europe,64.031235,100.0
-SRB,1994,,Upper middle income,Serbia,,7969952.0,Europe,63.028595,100.0
 SYC,2018,28740.55,High income,Seychelles,,103120.0,Africa,0.40864933,100.0
 SYC,1991,15093.391,High income,Seychelles,,71773.0,Africa,8.152862,
 SYC,1992,16100.242,High income,Seychelles,,72435.0,Africa,7.1725707,
@@ -3652,7 +3531,6 @@ SVK,2015,28728.156,High income,Slovakia,7.427893,5424449.0,Europe,0.48880747,100
 SVK,2016,29248.885,High income,Slovakia,7.4884686,5431205.0,Europe,0.44819236,100.0
 SVK,2017,30061.55,High income,Slovakia,7.5157948,5439418.0,Europe,0.42593557,100.0
 SVK,2019,31973.46,High income,Slovakia,7.3765907,5453932.0,Europe,0.37925863,100.0
-SVK,1991,,High income,Slovakia,10.854048,5280230.0,Europe,3.238022,100.0
 SVN,2017,36507.555,High income,Slovenia,9.449741,2098396.0,Europe,1.4451191,100.0
 SVN,1995,21480.328,High income,Slovenia,9.457739,1991115.0,Europe,8.141205,100.0
 SVN,1996,22182.21,High income,Slovenia,9.175171,1990671.0,Europe,7.5706396,100.0
@@ -3678,10 +3556,6 @@ SVN,2015,33799.727,High income,Slovenia,8.451187,2080865.0,Europe,1.6287743,100.
 SVN,2016,34853.043,High income,Slovenia,8.764577,2090020.0,Europe,1.5134563,100.0
 SVN,2018,37995.715,High income,Slovenia,10.043086,2105931.0,Europe,1.3730536,100.0
 SVN,2019,39034.234,High income,Slovenia,9.740798,2112905.0,Europe,1.2987044,100.0
-SVN,1991,,High income,Slovenia,7.8402195,1989799.0,Europe,10.771715,100.0
-SVN,1992,,High income,Slovenia,9.914008,1991344.0,Europe,10.117831,100.0
-SVN,1993,,High income,Slovenia,9.1966915,1991685.0,Europe,9.483618,100.0
-SVN,1994,,High income,Slovenia,8.750697,1991454.0,Europe,8.833467,100.0
 SLB,2012,2526.1467,Lower middle income,Solomon Islands,,567771.0,Oceania,434.64954,42.57421
 SLB,1991,2255.5342,Lower middle income,Solomon Islands,,333960.0,Oceania,507.59216,
 SLB,1992,2468.34,Lower middle income,Solomon Islands,,343929.0,Oceania,502.63702,
@@ -3769,35 +3643,6 @@ KOR,2015,38828.742,High income,South Korea,13.09249,50994396.0,Asia,0.024826303,
 KOR,2017,40957.418,High income,South Korea,13.393761,51511640.0,Asia,0.021024637,100.0
 KOR,2018,41965.89,High income,South Korea,13.975445,51676900.0,Asia,0.019445617,100.0
 KOR,2019,42758.59,High income,South Korea,13.659269,51803832.0,Asia,0.018103763,100.0
-SSD,2016,,Low income,South Sudan,,11066116.0,Africa,145.43312,5.1173677
-SSD,1991,,Low income,South Sudan,,4867193.0,Africa,218.59172,
-SSD,1992,,Low income,South Sudan,,4956976.0,Africa,216.74417,
-SSD,1993,,Low income,South Sudan,,5018174.0,Africa,214.10902,
-SSD,1994,,Low income,South Sudan,,5142865.0,Africa,210.9664,
-SSD,1995,,Low income,South Sudan,,5302053.0,Africa,209.45544,
-SSD,1996,,Low income,South Sudan,,5434896.0,Africa,205.04143,
-SSD,1997,,Low income,South Sudan,,5589417.0,Africa,198.46428,
-SSD,1998,,Low income,South Sudan,,5699437.0,Africa,193.73666,
-SSD,1999,,Low income,South Sudan,,5850149.0,Africa,188.16985,
-SSD,2000,,Low income,South Sudan,,6114443.0,Africa,183.59023,
-SSD,2001,,Low income,South Sudan,,6394433.0,Africa,177.53877,
-SSD,2002,,Low income,South Sudan,,6686105.0,Africa,174.05637,
-SSD,2003,,Low income,South Sudan,,6992367.0,Africa,171.79665,
-SSD,2004,,Low income,South Sudan,,7317127.0,Africa,170.22458,
-SSD,2005,,Low income,South Sudan,,7662659.0,Africa,168.63786,
-SSD,2006,,Low income,South Sudan,,8029516.0,Africa,167.67444,0.6431318
-SSD,2007,,Low income,South Sudan,,8417830.0,Africa,165.49664,1.0315623
-SSD,2008,,Low income,South Sudan,,8823896.0,Africa,163.4701,1.4272238
-SSD,2009,,Low income,South Sudan,,9229234.0,Africa,160.7789,3.0
-SSD,2010,,Low income,South Sudan,,9714425.0,Africa,157.70862,1.5
-SSD,2011,,Low income,South Sudan,,10243057.0,Africa,154.78394,2.6846848
-SSD,2012,,Low income,South Sudan,,10701605.0,Africa,152.47107,3.1363611
-SSD,2013,,Low income,South Sudan,,11106037.0,Africa,150.65025,3.6078682
-SSD,2014,,Low income,South Sudan,,11213286.0,Africa,148.21764,4.0971837
-SSD,2015,,Low income,South Sudan,,11194300.0,Africa,147.67796,4.60134
-SSD,2017,,Low income,South Sudan,,10658230.0,Africa,140.08032,4.2
-SSD,2018,,Low income,South Sudan,,10395332.0,Africa,136.34471,6.1731696
-SSD,2019,,Low income,South Sudan,,10447677.0,Africa,133.28314,6.707007
 ESP,2017,39528.926,High income,Spain,6.302608,46584168.0,Europe,0.18076575,100.0
 ESP,1991,28157.527,High income,Spain,6.939725,38997064.0,Europe,2.7041547,100.0
 ESP,1992,28280.326,High income,Spain,7.45856,39202248.0,Europe,2.3195953,100.0
@@ -3943,35 +3788,6 @@ CHE,2015,68159.22,High income,Switzerland,17.189407,8281735.0,Europe,0.008833071
 CHE,2016,68813.64,High income,Switzerland,19.295595,8372902.0,Europe,0.008040466,100.0
 CHE,2018,70558.56,High income,Switzerland,14.68272,8514431.0,Europe,0.007138062,100.0
 CHE,2019,70857.086,High income,Switzerland,14.180141,8575593.0,Europe,0.006922866,100.0
-SYR,2003,,Lower middle income,Syria,,17611356.0,Asia,1.780513,92.66836
-SYR,1991,,Lower middle income,Syria,,12782284.0,Asia,17.286602,
-SYR,1992,,Lower middle income,Syria,,13156408.0,Asia,15.302837,
-SYR,1993,,Lower middle income,Syria,,13537067.0,Asia,12.438385,
-SYR,1994,,Lower middle income,Syria,,13922629.0,Asia,10.467626,
-SYR,1995,,Lower middle income,Syria,,14313451.0,Asia,8.909803,
-SYR,1996,,Lower middle income,Syria,,14708883.0,Asia,7.4750395,
-SYR,1997,,Lower middle income,Syria,,15104000.0,Asia,6.2375183,
-SYR,1998,,Lower middle income,Syria,,15500556.0,Asia,5.3109694,
-SYR,1999,,Lower middle income,Syria,,15901207.0,Asia,4.303479,
-SYR,2000,,Lower middle income,Syria,,16307659.0,Asia,3.468199,93.48359
-SYR,2001,,Lower middle income,Syria,,16727949.0,Asia,2.769319,93.21865
-SYR,2002,,Lower middle income,Syria,,17164026.0,Asia,2.28911,86.6
-SYR,2004,,Lower middle income,Syria,,18084010.0,Asia,1.4552402,92.38771
-SYR,2005,,Lower middle income,Syria,,18583556.0,Asia,1.1871989,92.10653
-SYR,2006,,Lower middle income,Syria,,19432012.0,Asia,0.9829134,99.50576
-SYR,2007,,Lower middle income,Syria,,20703000.0,Asia,0.813665,91.55242
-SYR,2008,,Lower middle income,Syria,,21474060.0,Asia,0.6770984,91.28487
-SYR,2009,,Lower middle income,Syria,,21827222.0,Asia,0.5483975,91.027245
-SYR,2010,,Lower middle income,Syria,,22337558.0,Asia,0.47116926,92.7
-SYR,2011,,Lower middle income,Syria,,22730734.0,Asia,0.421578,91.514725
-SYR,2012,,Lower middle income,Syria,,22605582.0,Asia,0.3792295,90.79319
-SYR,2013,,Lower middle income,Syria,,21495830.0,Asia,0.34885404,90.1494
-SYR,2014,,Lower middle income,Syria,,20072232.0,Asia,0.32030964,89.975494
-SYR,2015,,Lower middle income,Syria,,19205178.0,Asia,0.28757235,89.81643
-SYR,2016,,Lower middle income,Syria,,18964252.0,Asia,0.25852165,89.669235
-SYR,2017,,Lower middle income,Syria,,18983370.0,Asia,0.22961009,89.530945
-SYR,2018,,Lower middle income,Syria,,19333464.0,Asia,0.19865791,86.0
-SYR,2019,,Lower middle income,Syria,,20098252.0,Asia,0.16772713,89.26921
 TJK,2015,2959.9941,Lower middle income,Tajikistan,1.0472088,8524066.0,Asia,80.59405,98.0
 TJK,1991,3615.166,Lower middle income,Tajikistan,0.80303717,5556315.0,Asia,141.73299,
 TJK,1992,2521.4326,Lower middle income,Tajikistan,0.8847825,5656216.0,Asia,146.62042,
@@ -4407,35 +4223,6 @@ VUT,2016,2921.7578,Lower middle income,Vanuatu,,283239.0,Oceania,226.99039,57.82
 VUT,2017,3031.1907,Lower middle income,Vanuatu,,290250.0,Oceania,223.83568,62.8
 VUT,2018,3045.0427,Lower middle income,Vanuatu,,297307.0,Oceania,220.9685,61.754513
 VUT,2019,3070.3508,Lower middle income,Vanuatu,,304414.0,Oceania,217.72653,64.59019
-VEN,2006,,Upper middle income,Venezuela,3.5662134,27102084.0,South America,1.0922662,99.3
-VEN,1991,,Upper middle income,Venezuela,4.835652,20226212.0,South America,3.363723,
-VEN,1992,,Upper middle income,Venezuela,4.5957813,20700462.0,South America,3.0515192,97.820206
-VEN,1993,,Upper middle income,Venezuela,5.143651,21172098.0,South America,2.7645354,98.23953
-VEN,1994,,Upper middle income,Venezuela,4.6944394,21640830.0,South America,2.6269429,98.32333
-VEN,1995,,Upper middle income,Venezuela,4.9690127,22107288.0,South America,2.3950288,99.0
-VEN,1996,,Upper middle income,Venezuela,4.2622523,22572114.0,South America,2.146502,98.48413
-VEN,1997,,Upper middle income,Venezuela,5.0371037,23037560.0,South America,1.928297,98.7
-VEN,1998,,Upper middle income,Venezuela,6.745862,23503816.0,South America,1.8371938,98.4
-VEN,1999,,Upper middle income,Venezuela,4.125505,23966964.0,South America,1.731785,98.9
-VEN,2000,,Upper middle income,Venezuela,2.9863281,24427732.0,South America,1.6032579,98.9
-VEN,2001,,Upper middle income,Venezuela,3.3283455,24880210.0,South America,1.5255572,99.9
-VEN,2002,,Upper middle income,Venezuela,3.2067003,25330926.0,South America,1.4798455,99.8
-VEN,2003,,Upper middle income,Venezuela,4.1198235,25782032.0,South America,1.4329762,95.7
-VEN,2004,,Upper middle income,Venezuela,3.6644735,26226930.0,South America,1.2665536,99.1
-VEN,2005,,Upper middle income,Venezuela,3.609195,26668790.0,South America,1.1731212,98.85616
-VEN,2007,,Upper middle income,Venezuela,3.837317,27525096.0,South America,0.9778768,98.888176
-VEN,2008,,Upper middle income,Venezuela,3.812085,27933836.0,South America,0.86315876,98.91367
-VEN,2009,,Upper middle income,Venezuela,4.5999174,28327896.0,South America,0.7328505,98.949104
-VEN,2010,,Upper middle income,Venezuela,4.851101,28715026.0,South America,0.6095445,99.05495
-VEN,2011,,Upper middle income,Venezuela,4.1244926,29096158.0,South America,0.54687333,98.84
-VEN,2012,,Upper middle income,Venezuela,3.0021799,29470428.0,South America,0.49600115,99.20808
-VEN,2013,,Upper middle income,Venezuela,3.5730228,29838022.0,South America,0.43779123,99.25722
-VEN,2014,,Upper middle income,Venezuela,4.9681234,30193260.0,South America,0.40299785,100.0
-VEN,2015,,Upper middle income,Venezuela,2.8999033,30529722.0,South America,0.37036142,100.0
-VEN,2016,,Upper middle income,Venezuela,2.3010051,30741464.0,South America,0.35302356,99.4
-VEN,2017,,Upper middle income,Venezuela,2.1242478,30563430.0,South America,0.3369408,99.2
-VEN,2018,,Upper middle income,Venezuela,,29825652.0,South America,0.31864408,99.9112
-VEN,2019,,Upper middle income,Venezuela,0.19916385,28971686.0,South America,0.313694,99.976814
 VNM,2018,9636.013,Lower middle income,Vietnam,1.7198292,94914328.0,Asia,43.247833,100.0
 VNM,1991,2177.4736,Lower middle income,Vietnam,0.33595988,68358824.0,Asia,148.48901,
 VNM,1992,2317.2666,Lower middle income,Vietnam,0.32972082,69788752.0,Asia,143.83098,
@@ -4465,35 +4252,6 @@ VNM,2015,8091.0903,Lower middle income,Vietnam,1.6018397,92191400.0,Asia,51.8061
 VNM,2016,8545.702,Lower middle income,Vietnam,1.6264114,93126528.0,Asia,48.88091,99.2
 VNM,2017,9050.688,Lower middle income,Vietnam,1.5826577,94033048.0,Asia,46.06272,100.0
 VNM,2019,10252.005,Lower middle income,Vietnam,2.2055502,95776712.0,Asia,40.38294,99.4
-YEM,2014,,Lower middle income,Yemen,,27753310.0,Asia,83.44202,66.1
-YEM,1991,,Lower middle income,Yemen,,13895858.0,Asia,246.03365,
-YEM,1992,,Lower middle income,Yemen,,14433772.0,Asia,239.07584,44.1
-YEM,1993,,Lower middle income,Yemen,,14988045.0,Asia,231.79092,40.774715
-YEM,1994,,Lower middle income,Yemen,,15553180.0,Asia,224.28314,41.985134
-YEM,1995,,Lower middle income,Yemen,,16103338.0,Asia,216.3895,43.193512
-YEM,1996,,Lower middle income,Yemen,,16614329.0,Asia,207.26228,44.39917
-YEM,1997,,Lower middle income,Yemen,,17108686.0,Asia,197.47853,42.6
-YEM,1998,,Lower middle income,Yemen,,17608138.0,Asia,186.58646,46.79961
-YEM,1999,,Lower middle income,Yemen,,18114552.0,Asia,177.33911,47.992947
-YEM,2000,,Lower middle income,Yemen,,18628704.0,Asia,168.1245,49.187256
-YEM,2001,,Lower middle income,Yemen,,19143456.0,Asia,158.81488,50.34124
-YEM,2002,,Lower middle income,Yemen,,19660662.0,Asia,151.24023,51.487637
-YEM,2003,,Lower middle income,Yemen,,20188800.0,Asia,143.28896,52.628803
-YEM,2004,,Lower middle income,Yemen,,20733406.0,Asia,135.97012,49.59
-YEM,2005,,Lower middle income,Yemen,,21320676.0,Asia,129.00174,54.90482
-YEM,2006,,Lower middle income,Yemen,,21966304.0,Asia,122.9019,55.800335
-YEM,2007,,Lower middle income,Yemen,,22641538.0,Asia,117.10516,57.18857
-YEM,2008,,Lower middle income,Yemen,,23329008.0,Asia,112.17471,58.33993
-YEM,2009,,Lower middle income,Yemen,,24029594.0,Asia,106.405426,59.50124
-YEM,2010,,Lower middle income,Yemen,,24743944.0,Asia,100.42052,60.675194
-YEM,2011,,Lower middle income,Yemen,,25475608.0,Asia,96.179,61.864506
-YEM,2012,,Lower middle income,Yemen,,26223390.0,Asia,91.76767,52.41
-YEM,2013,,Lower middle income,Yemen,,26984008.0,Asia,87.709435,75.6
-YEM,2015,,Lower middle income,Yemen,,28516552.0,Asia,80.63067,67.31093
-YEM,2016,,Lower middle income,Yemen,,29274010.0,Asia,77.63474,68.859505
-YEM,2017,,Lower middle income,Yemen,,30034386.0,Asia,75.228905,79.2
-YEM,2018,,Lower middle income,Yemen,,30790514.0,Asia,72.67673,62.0
-YEM,2019,,Lower middle income,Yemen,,31546694.0,Asia,69.576546,72.751076
 ZMB,2015,3365.3792,Lower middle income,Zambia,0.5069555,16248231.0,Africa,128.4058,31.1
 ZMB,1991,2232.8374,Lower middle income,Zambia,0.3725438,7880472.0,Africa,216.6051,12.752703
 ZMB,1992,2141.5046,Lower middle income,Zambia,0.37036872,8074342.0,Africa,216.84387,19.2

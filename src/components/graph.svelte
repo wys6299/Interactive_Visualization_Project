@@ -16,23 +16,23 @@
     
     let years = [];
 
-    const margin = { top: 20, right: 20, bottom: 35, left: 40 };
-    const width = 960;
-    const height = 560;
+    let margin = { top: 20, right: 20, bottom: 35, left: 40 };
+    let width = 960;
+    let height = 560;
 
     let x;
     let y;
     let radius;
     let color;
 
-    const dataAt = year => {
+    let dataAt = year => {
         return data.filter(d => d.Year === year);
     };
 
-    const bisect = d3.bisector((d) => d.GDP).center;
+    let bisect = d3.bisector((d) => d.GDP).center;
     let tooltipPt = null;
     function handlePointerMove(event){
-        const i = bisect(data, x.invert(d3.pointer(event)[0]));
+        let i = bisect(data, x.invert(d3.pointer(event)[0]));
         tooltipPt = data[i];
         console.log(tooltipPt);
     }
@@ -48,19 +48,19 @@
     
     onMount(() => {
         // Determine domain for x, y, and radius scales
-        const minGDP = d3.min(data, d => d.GDP);
-        const maxGDP = d3.max(data, d => d.GDP);
-        const minDeath = d3.min(data, d => d.Death);
-        const maxDeath = d3.max(data, d => d.Death);
-        const minPopulation = d3.min(data, d => d.Population);
-        const maxPopulation = d3.max(data, d => d.Population);
+        let minGDP = d3.min(data, d => d.GDP);
+        let maxGDP = d3.max(data, d => d.GDP);
+        let minDeath = d3.min(data, d => d.Death);
+        let maxDeath = d3.max(data, d => d.Death);
+        let minPopulation = d3.min(data, d => d.Population);
+        let maxPopulation = d3.max(data, d => d.Population);
 
         x = d3.scaleLog([minGDP, maxGDP], [margin.left, width - margin.right]);
         y = d3.scaleLinear([minDeath, maxDeath], [height - margin.bottom, margin.top]);
         radius = d3.scaleSqrt([minPopulation, maxPopulation], [0, width / 24]);
         color = d3.scaleOrdinal(data.map(d => d.Continent), d3.schemeCategory10).unknown("black");
 
-        const svgNode = d3.select("#chart").append("svg")
+        let svgNode = d3.select("#chart").append("svg")
             .attr("viewBox", [0, 0, width, height]);
 
         xAxis = g => g
@@ -161,38 +161,29 @@
 </script>
 
 <div id="chart">
-    <svg
+    <!-- <svg
     bind:this={svg}
 >
-    <g class="tooltip" style="display: none;">
-        <rect x="-30" y="-30" width="60" height="30" fill="white" stroke="black" stroke-width="1"></rect>
-        <text x="0" y="-15" text-anchor="middle" font-size="12px" font-weight="bold"></text>
-    </g>
+        <g class="tooltip" style="display: none;">
+            <rect x="-30" y="-30" width="60" height="30" fill="white" stroke="black" stroke-width="1"></rect>
+            <text x="0" y="-15" text-anchor="middle" font-size="12px" font-weight="bold"></text>
+        </g>
 
-    {#each dataAt(selectedYear) as d}
-        <circle
-            cx={x(d.GDP)}
-            cy={y(d.Death)}
-            r={radius(d.Population)}
-            fill={color(d.Continent)}
-            fill-opacity="0.7" 
-            stroke="black"
-            stroke-width="1"
-        >
-            <title>
-                {d.Entity}, {d.Continent}
-                {"\n"}
-                GDP: {d.GDP}
-                {"\n"}
-                Population: {d.Population}
-                {"\n"}
-                Deaths: {d.Death}
-            </title>
-        </circle>
-    {/each}
-</svg>
+        {#each dataAt(selectedYear) as d}
+            <circle
+                cx={x(d.GDP)}
+                cy={y(d.Death)}
+                r={radius(d.Population)}
+                fill={color(d.Continent)}
+                fill-opacity="0.7" 
+                stroke="black"
+                stroke-width="1"
+            >
+            </circle>
+        {/each}
+    </svg> -->
 </div>
-<Slider bind:selectedYear />
+<Slider bind:selectedYear /> 
 
 <style>
   /* Add your styles here */
