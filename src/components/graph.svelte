@@ -12,7 +12,7 @@
     let grid;
     let update;
     let selectedYear;
-    let tooltipPt;
+    
     
     let years = [];
 
@@ -29,19 +29,23 @@
         return data.filter(d => d.Year === year);
     };
 
-    const bisect = d3.bisector((d) => d.Year).center;
-
-    const handlePointerMove = (event) => {
-        const xPos = d3.pointer(event)[0];
-        const year = x.invert(xPos);
-        const i = bisect(data, year);
+    const bisect = d3.bisector((d) => d.GDP).center;
+    let tooltipPt = null;
+    function handlePointerMove(event){
+        const i = bisect(data, x.invert(d3.pointer(event)[0]));
         tooltipPt = data[i];
-    };
+        console.log(tooltipPt);
+    }
 
-    const handlePointerLeave = () => {
+    function handlePointerLeave(event) {
         tooltipPt = null;
-    };
+    }
 
+    $: d3.select(svg)
+            .on('pointerenter pointermove', handlePointerMove)
+            .on('pointerleave', handlePointerLeave);
+
+    
     onMount(() => {
         // Determine domain for x, y, and radius scales
         const minGDP = d3.min(data, d => d.GDP);
@@ -128,13 +132,8 @@
 
         // Calculate the range of years from your data
         years = Array.from(new Set(data.map(d => d.Year)));
-        console.log(years);
 
-        d3.select(svgNode.node())
-            .on('pointerenter pointermove', handlePointerMove)
-            .on('pointerleave', handlePointerLeave);
-
-        return svgNode.node();
+        
     });
 
     afterUpdate(() => {
@@ -144,15 +143,54 @@
             .attr("cy", d => y(d.Death))
             .attr("r", d => radius(d.Population))
             .attr("fill", d => color(d.Continent));
+
+        // Show tooltip near the nearest bubble
+        if (tooltipPt) {
+            d3.select(svg)
+                .select("g.tooltip")
+                .attr("transform", `translate(${x(tooltipPt.GDP)},${y(tooltipPt.Death)})`)
+                .style("display", "block")
+                .select("text")
+                .text(`${tooltipPt.Entity} - ${tooltipPt.Continent}`);
+        } else {
+            d3.select(svg)
+                .select("g.tooltip")
+                .style("display", "none");
+        }
     });
 </script>
 
 <div id="chart">
     <svg
     bind:this={svg}
-    >
-        
-    </svg>
+>
+    <g class="tooltip" style="display: none;">
+        <rect x="-30" y="-30" width="60" height="30" fill="white" stroke="black" stroke-width="1"></rect>
+        <text x="0" y="-15" text-anchor="middle" font-size="12px" font-weight="bold"></text>
+    </g>
+
+    {#each dataAt(selectedYear) as d}
+        <circle
+            cx={x(d.GDP)}
+            cy={y(d.Death)}
+            r={radius(d.Population)}
+            fill={color(d.Continent)}
+            fill-opacity="0.7" 
+            stroke="black"
+            stroke-width="1"
+        >
+            <title>
+                {d.Entity}, {d.Continent}
+                {"\n"}
+                GDP: {d.GDP}
+                {"\n"}
+                Population: {d.Population}
+                {"\n"}
+                Deaths: {d.Death}
+            </title>
+        </circle>
+    {/each}
+</svg>
 </div>
 <Slider bind:selectedYear />
 

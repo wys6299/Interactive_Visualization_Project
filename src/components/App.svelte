@@ -20,7 +20,7 @@
 </script>
 
 <main>
-  <h1>Global gdp_co2_death Trends</h1>
+  <h2>Indoor Air Pollution vs GDP vs Population through Years</h2>
   <Graph {data} />
 </main>
 
