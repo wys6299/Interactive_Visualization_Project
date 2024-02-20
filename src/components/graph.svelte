@@ -12,6 +12,7 @@
     let grid;
     let update;
     let selectedYear;
+    let tooltipPt;
     
     let years = [];
 
@@ -28,10 +29,31 @@
         return data.filter(d => d.Year === year);
     };
 
+    const bisect = d3.bisector((d) => d.Year).center;
+
+    const handlePointerMove = (event) => {
+        const xPos = d3.pointer(event)[0];
+        const year = x.invert(xPos);
+        const i = bisect(data, year);
+        tooltipPt = data[i];
+    };
+
+    const handlePointerLeave = () => {
+        tooltipPt = null;
+    };
+
     onMount(() => {
-        x = d3.scaleLog([200, 1e5], [margin.left, width - margin.right]);
-        y = d3.scaleLinear([14, 86], [height - margin.bottom, margin.top]);
-        radius = d3.scaleSqrt([0, 5e8], [0, width / 24]);
+        // Determine domain for x, y, and radius scales
+        const minGDP = d3.min(data, d => d.GDP);
+        const maxGDP = d3.max(data, d => d.GDP);
+        const minDeath = d3.min(data, d => d.Death);
+        const maxDeath = d3.max(data, d => d.Death);
+        const minPopulation = d3.min(data, d => d.Population);
+        const maxPopulation = d3.max(data, d => d.Population);
+
+        x = d3.scaleLog([minGDP, maxGDP], [margin.left, width - margin.right]);
+        y = d3.scaleLinear([minDeath, maxDeath], [height - margin.bottom, margin.top]);
+        radius = d3.scaleSqrt([minPopulation, maxPopulation], [0, width / 24]);
         color = d3.scaleOrdinal(data.map(d => d.Continent), d3.schemeCategory10).unknown("black");
 
         const svgNode = d3.select("#chart").append("svg")
@@ -94,7 +116,7 @@
             .attr("r", d => radius(d.Population))
             .attr("fill", d => color(d.Continent))
             .call(circle => circle.append("title")
-                .text(d => [d.Entity, d.Continent].join("\n")));
+                .text(d => [d.Entity, d.Continent, ['Deaths: '+d.Death], ['GDP: '+d.GDP], ['Population: '+d.Population]].join("\n")));
 
         update = newData => {
             circle.data(newData, d => d.Entity)
@@ -106,7 +128,11 @@
 
         // Calculate the range of years from your data
         years = Array.from(new Set(data.map(d => d.Year)));
-        console.log(years)
+        console.log(years);
+
+        d3.select(svgNode.node())
+            .on('pointerenter pointermove', handlePointerMove)
+            .on('pointerleave', handlePointerLeave);
 
         return svgNode.node();
     });
@@ -121,7 +147,13 @@
     });
 </script>
 
-<div id="chart"></div>
+<div id="chart">
+    <svg
+    bind:this={svg}
+    >
+        
+    </svg>
+</div>
 <Slider bind:selectedYear />
 
 <style>
