@@ -1,12 +1,9 @@
 <script lang="ts">
+    import { onMount, afterUpdate } from 'svelte';
     import * as d3 from 'd3';
-    import { onMount } from 'svelte';
-
-    // Import Scrubber.svelte if needed
-    import Scrubber from "./scrubber.svelte"
+    import Slider from './Slider.svelte';
 
     export let data;
-    console.log(data);
 
     let svg;
     let circle;
@@ -14,44 +11,29 @@
     let yAxis;
     let grid;
     let update;
+    let selectedYear;
+    
+    let years = [];
 
     const margin = { top: 20, right: 20, bottom: 35, left: 40 };
     const width = 960;
     const height = 560;
 
-    let x = d3.scaleLog([200, 1e5], [margin.left, width - margin.right]);
-    let y = d3.scaleLinear([14, 86], [height - margin.bottom, margin.top]);
-    let radius = d3.scaleSqrt([0, 5e8], [0, width / 24]);
-    let color = d3.scaleOrdinal(data.map(d => d.region), d3.schemeCategory10).unknown("black");
+    let x;
+    let y;
+    let radius;
+    let color;
 
-    const bisectDate = d3.bisector(([date]) => date).left;
-
-    const parseSeries = series => {
-        return series.map(([year, value]) => [new Date(year, 0, 1), value]);
-    };
-
-    const dataAt = date => {
-        return data.map(d => ({
-            name: d.name,
-            region: d.region,
-            income: valueAt(d.income, date),
-            population: valueAt(d.population, date),
-            lifeExpectancy: valueAt(d.lifeExpectancy, date)
-        }));
-    };
-
-    const valueAt = (values, date) => {
-        const i = bisectDate(values, date, 0, values.length - 1);
-        const a = values[i];
-        if (i > 0) {
-            const b = values[i - 1];
-            const t = (date - a[0]) / (b[0] - a[0]);
-            return a[1] * (1 - t) + b[1] * t;
-        }
-        return a[1];
+    const dataAt = year => {
+        return data.filter(d => d.Year === year);
     };
 
     onMount(() => {
+        x = d3.scaleLog([200, 1e5], [margin.left, width - margin.right]);
+        y = d3.scaleLinear([14, 86], [height - margin.bottom, margin.top]);
+        radius = d3.scaleSqrt([0, 5e8], [0, width / 24]);
+        color = d3.scaleOrdinal(data.map(d => d.Continent), d3.schemeCategory10).unknown("black");
+
         const svgNode = d3.select("#chart").append("svg")
             .attr("viewBox", [0, 0, width, height]);
 
@@ -64,7 +46,7 @@
                 .attr("y", margin.bottom - 4)
                 .attr("fill", "currentColor")
                 .attr("text-anchor", "end")
-                .text("Income per capita (dollars) →"));
+                .text("GDP →"));
 
         yAxis = g => g
             .attr("transform", `translate(${margin.left},0)`)
@@ -75,7 +57,7 @@
                 .attr("y", 10)
                 .attr("fill", "currentColor")
                 .attr("text-anchor", "start")
-                .text("↑ Life expectancy (years)"));
+                .text("↑ Death"));
 
         grid = g => g
             .attr("stroke", "currentColor")
@@ -104,38 +86,43 @@
         circle = svgNode.append("g")
             .attr("stroke", "black")
             .selectAll("circle")
-            .data(dataAt(1800), d => d.name)
+            .data(dataAt(1990), d => d.Entity)
             .join("circle")
-            .sort((a, b) => d3.descending(a.population, b.population))
-            .attr("cx", d => x(d.income))
-            .attr("cy", d => y(d.lifeExpectancy))
-            .attr("r", d => radius(d.population))
-            .attr("fill", d => color(d.region))
+            .sort((a, b) => d3.descending(a.Population, b.Population))
+            .attr("cx", d => x(d.GDP))
+            .attr("cy", d => y(d.Death))
+            .attr("r", d => radius(d.Population))
+            .attr("fill", d => color(d.Continent))
             .call(circle => circle.append("title")
-                .text(d => [d.name, d.region].join("\n")));
+                .text(d => [d.Entity, d.Continent].join("\n")));
 
         update = newData => {
-            circle.data(newData, d => d.name)
-                .sort((a, b) => d3.descending(a.population, b.population))
-                .attr("cx", d => x(d.income))
-                .attr("cy", d => y(d.lifeExpectancy))
-                .attr("r", d => radius(d.population));
+            circle.data(newData, d => d.Entity)
+                .sort((a, b) => d3.descending(a.Population, b.Population))
+                .attr("cx", d => x(d.GDP))
+                .attr("cy", d => y(d.Death))
+                .attr("r", d => radius(d.Population));
         };
+
+        // Calculate the range of years from your data
+        years = Array.from(new Set(data.map(d => d.Year)));
 
         return svgNode.node();
     });
 
-    // Fetch your data here if needed
-    data = data
-        .map(({ name, region, income, population, lifeExpectancy }) => ({
-            name,
-            region,
-            income: parseSeries(income),
-            population: parseSeries(population),
-            lifeExpectancy: parseSeries(lifeExpectancy)
-        }));
-
-    // Define parseSeries and other necessary functions here
+    afterUpdate(() => {
+        circle.data(dataAt(selectedYear), d => d.Entity)
+            .sort((a, b) => d3.descending(a.Population, b.Population))
+            .attr("cx", d => x(d.GDP))
+            .attr("cy", d => y(d.Death))
+            .attr("r", d => radius(d.Population))
+            .attr("fill", d => color(d.Continent));
+    });
 </script>
 
 <div id="chart"></div>
+<Slider bind:selectedYear />
+
+<style>
+  /* Add your styles here */
+</style>

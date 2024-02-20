@@ -7,9 +7,15 @@
   let tempData = [];
 
   onMount(async () => {
-    const res = await fetch('nations.json');
-    tempData = await res.json();
-    data = res; // Assigning data inside the onMount function
+    const res = await fetch('gdp_co2_death.csv');
+    const text = await res.text();
+    tempData = d3.csvParse(text, d3.autoType);
+
+    // Parse date fields and create a new 'date' variable
+    data = tempData.map(d => ({
+      ...d,
+      date: new Date(d.Year, 0) // Assuming 'Year' is the name of your date field
+    }));
   });
 </script>
 
