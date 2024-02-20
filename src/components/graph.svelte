@@ -12,8 +12,7 @@
     let grid;
     let update;
     let selectedYear;
-    
-    
+
     let years = [];
 
     let margin = { top: 20, right: 20, bottom: 35, left: 40 };
@@ -33,8 +32,8 @@
     let tooltipPt = null;
     function handlePointerMove(event){
         let i = bisect(data, x.invert(d3.pointer(event)[0]));
+        console.log(i);
         tooltipPt = data[i];
-        console.log(tooltipPt);
     }
 
     function handlePointerLeave(event) {
@@ -46,7 +45,7 @@
             .on('pointerleave', handlePointerLeave);
 
     
-    onMount(() => {
+    $: onMount(() => {
         // Determine domain for x, y, and radius scales
         let minGDP = d3.min(data, d => d.GDP);
         let maxGDP = d3.max(data, d => d.GDP);
@@ -133,10 +132,42 @@
         // Calculate the range of years from your data
         years = Array.from(new Set(data.map(d => d.Year)));
 
-        
+        // Legend
+        const legend = svgNode.append("g")
+            .attr("class", "legend")
+            .attr("transform", `translate(${width - 200}, 20)`);
+
+        const legendItems = legend.selectAll(".legend-item")
+            .data(color.domain())
+            .enter().append("g")
+            .attr("class", "legend-item")
+            .attr("transform", (d, i) => `translate(0, ${i * 20})`)
+            .on("click", toggleContinent);
+
+        legendItems.append("rect")
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("width", 15)
+            .attr("height", 15)
+            .attr("fill", color);
+
+        legendItems.append("text")
+            .attr("x", 20)
+            .attr("y", 10)
+            .attr("dy", "0.35em")
+            .text(d => d);
+
+        function toggleContinent(continent) {
+            const selected = legendItems.filter(d => d === continent).select("rect");
+            const visible = selected.attr("fill-opacity") === "1" ? "hidden" : "visible";
+            circle.filter(d => d.Continent === continent)
+                .attr("visibility", visible);
+            selected.attr("fill-opacity", visible === "visible" ? "1" : "0.5");
+        }
+
     });
 
-    afterUpdate(() => {
+    $: afterUpdate(() => {
         circle.data(dataAt(selectedYear), d => d.Entity)
             .sort((a, b) => d3.descending(a.Population, b.Population))
             .attr("cx", d => x(d.GDP))
@@ -148,7 +179,7 @@
         if (tooltipPt) {
             d3.select(svg)
                 .select("g.tooltip")
-                .attr("transform", `translate(${x(tooltipPt.GDP)},${y(tooltipPt.Death)})`)
+                .attr("transform", `translate(${x(tooltipPt.GDP)},${y(tooltipPt.GDP)})`)
                 .style("display", "block")
                 .select("text")
                 .text(`${tooltipPt.Entity} - ${tooltipPt.Continent}`);

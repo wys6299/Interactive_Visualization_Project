@@ -1,7 +1,7 @@
 # Interactive Visualization
 
 ## The graph
-<iframe src="https://wys6299.github.io/Interactive_Visualization_Project" width="100%" height="500px"></iframe>
+<iframe src="/routes/+page.svelte" width="100%" height="500px"></iframe>
 
 
 
