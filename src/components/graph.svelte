@@ -86,7 +86,7 @@
         circle = svgNode.append("g")
             .attr("stroke", "black")
             .selectAll("circle")
-            .data(dataAt(1990), d => d.Entity)
+            .data(dataAt(1991), d => d.Entity)
             .join("circle")
             .sort((a, b) => d3.descending(a.Population, b.Population))
             .attr("cx", d => x(d.GDP))
@@ -106,6 +106,7 @@
 
         // Calculate the range of years from your data
         years = Array.from(new Set(data.map(d => d.Year)));
+        console.log(years)
 
         return svgNode.node();
     });
