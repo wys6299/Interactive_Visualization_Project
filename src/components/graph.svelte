@@ -1,65 +1,60 @@
 <script lang="ts">
-    import { onMount, afterUpdate } from 'svelte';
+    import { onMount } from 'svelte';
     import * as d3 from 'd3';
     import Slider from './Slider.svelte';
 
     export let data;
+    export let selectedYear;
 
     let svg;
     let circle;
     let xAxis;
     let yAxis;
     let grid;
-    let update;
-    let selectedYear;
-
-    let years = [];
-
-    let margin = { top: 20, right: 20, bottom: 35, left: 40 };
-    let width = 960;
-    let height = 560;
-
     let x;
     let y;
     let radius;
     let color;
 
-    let dataAt = year => {
-        return data.filter(d => d.Year === year);
+    const margin = { top: 20, right: 20, bottom: 35, left: 40 };
+    const width = 960;
+    const height = 560;
+
+    const bisect = d3.bisector((d) => d.Year).center;
+
+    const dataAt = year => data.filter(d => d.Year === year);
+
+    const handlePointerMove = (event) => {
+        const xPos = d3.pointer(event)[0];
+        const year = x.invert(xPos);
+        const i = bisect(data, year);
+        // Handle tooltip logic here
     };
 
-    let bisect = d3.bisector((d) => d.GDP).center;
-    let tooltipPt = null;
-    function handlePointerMove(event){
-        let i = bisect(data, x.invert(d3.pointer(event)[0]));
-        console.log(i);
-        tooltipPt = data[i];
-    }
+    const handlePointerLeave = () => {
+        // Handle tooltip hiding logic here
+    };
 
-    function handlePointerLeave(event) {
-        tooltipPt = null;
-    }
+    onMount(async () => {
+        // Fetch data
+        const res = await fetch('gdp_co2_death.csv');
+        data = await res.text();
+        data = d3.csvParse(data, d3.autoType);
 
-    $: d3.select(svg)
-            .on('pointerenter pointermove', handlePointerMove)
-            .on('pointerleave', handlePointerLeave);
-
-    
-    $: onMount(() => {
         // Determine domain for x, y, and radius scales
-        let minGDP = d3.min(data, d => d.GDP);
-        let maxGDP = d3.max(data, d => d.GDP);
-        let minDeath = d3.min(data, d => d.Death);
-        let maxDeath = d3.max(data, d => d.Death);
-        let minPopulation = d3.min(data, d => d.Population);
-        let maxPopulation = d3.max(data, d => d.Population);
+        const minGDP = d3.min(data, d => d.GDP);
+        const maxGDP = d3.max(data, d => d.GDP);
+        const minDeath = d3.min(data, d => d.Death);
+        const maxDeath = d3.max(data, d => d.Death);
+        const minPopulation = d3.min(data, d => d.Population);
+        const maxPopulation = d3.max(data, d => d.Population);
 
         x = d3.scaleLog([minGDP, maxGDP], [margin.left, width - margin.right]);
         y = d3.scaleLinear([minDeath, maxDeath], [height - margin.bottom, margin.top]);
         radius = d3.scaleSqrt([minPopulation, maxPopulation], [0, width / 24]);
         color = d3.scaleOrdinal(data.map(d => d.Continent), d3.schemeCategory10).unknown("black");
 
-        let svgNode = d3.select("#chart").append("svg")
+        const svgNode = d3.select("#chart").append("svg")
             .attr("viewBox", [0, 0, width, height]);
 
         xAxis = g => g
@@ -121,80 +116,37 @@
             .call(circle => circle.append("title")
                 .text(d => [d.Entity, d.Continent, ['Deaths: '+d.Death], ['GDP: '+d.GDP], ['Population: '+d.Population]].join("\n")));
 
-        update = newData => {
-            circle.data(newData, d => d.Entity)
+        // Attach event listeners for pointer events
+        d3.select(svgNode.node())
+            .on('pointerenter pointermove', handlePointerMove)
+            .on('pointerleave', handlePointerLeave);
+
+        // Return the SVG node
+        return svgNode.node();
+    });
+
+    $: {
+        // Update circle positions and attributes when data or selectedYear changes
+        if (circle) {
+            circle.data(dataAt(selectedYear), d => d.Entity)
                 .sort((a, b) => d3.descending(a.Population, b.Population))
                 .attr("cx", d => x(d.GDP))
                 .attr("cy", d => y(d.Death))
-                .attr("r", d => radius(d.Population));
-        };
-
-        // Calculate the range of years from your data
-        years = Array.from(new Set(data.map(d => d.Year)));
-
-        // Legend
-        const legend = svgNode.append("g")
-            .attr("class", "legend")
-            .attr("transform", `translate(${width - 200}, 20)`);
-
-        const legendItems = legend.selectAll(".legend-item")
-            .data(color.domain())
-            .enter().append("g")
-            .attr("class", "legend-item")
-            .attr("transform", (d, i) => `translate(0, ${i * 20})`)
-            .on("click", toggleContinent);
-
-        legendItems.append("rect")
-            .attr("x", 0)
-            .attr("y", 0)
-            .attr("width", 15)
-            .attr("height", 15)
-            .attr("fill", color);
-
-        legendItems.append("text")
-            .attr("x", 20)
-            .attr("y", 10)
-            .attr("dy", "0.35em")
-            .text(d => d);
-
-        function toggleContinent(continent) {
-            const selected = legendItems.filter(d => d === continent).select("rect");
-            const visible = selected.attr("fill-opacity") === "1" ? "hidden" : "visible";
-            circle.filter(d => d.Continent === continent)
-                .attr("visibility", visible);
-            selected.attr("fill-opacity", visible === "visible" ? "1" : "0.5");
+                .attr("r", d => radius(d.Population))
+                .attr("fill", d => color(d.Continent));
         }
-
-    });
-
-    $: afterUpdate(() => {
-        circle.data(dataAt(selectedYear), d => d.Entity)
-            .sort((a, b) => d3.descending(a.Population, b.Population))
-            .attr("cx", d => x(d.GDP))
-            .attr("cy", d => y(d.Death))
-            .attr("r", d => radius(d.Population))
-            .attr("fill", d => color(d.Continent));
-
-        // Show tooltip near the nearest bubble
-        if (tooltipPt) {
-            d3.select(svg)
-                .select("g.tooltip")
-                .attr("transform", `translate(${x(tooltipPt.GDP)},${y(tooltipPt.GDP)})`)
-                .style("display", "block")
-                .select("text")
-                .text(`${tooltipPt.Entity} - ${tooltipPt.Continent}`);
-        } else {
-            d3.select(svg)
-                .select("g.tooltip")
-                .style("display", "none");
-        }
-    });
+    }
 </script>
 
-<div id="chart">
-    
-</div>
-<Slider bind:selectedYear /> 
+
+<svg id='chart'
+        bind:this={svg}
+        {width}
+        {height}
+        viewBox="0 0 {width} {height}"
+        style="max-width: 100%; height: auto;"/>
+
+<Slider bind:selectedYear />
 
 <style>
   /* Add your styles here */
